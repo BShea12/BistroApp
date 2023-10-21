@@ -3,12 +3,12 @@ import {getMenu, getName, getPrice, getSwappable, hasItem} from './menuItems.js'
 
 
 // Define an array to store the selected food items
-const selectedItems = [];
+
 
 // Define a Map to store item prices
 
 // Function to add an item to the list
-function addItemToOrder(item) {
+function addItemToOrder(selectedItems, item) {
   selectedItems.push(item);
 }
 
