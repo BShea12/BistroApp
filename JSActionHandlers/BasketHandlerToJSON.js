@@ -3,12 +3,12 @@ import {getMenu, getName, getPrice, getSwappable, hasItem} from './menuItems.mjs
 import fs from 'fs';
 
 function createBasket(customer) {
-    const jsonContent = JSON.stringify([]);
-    fs.writeFileSync(`./${customer}basket.json`, "hi", 'utf8', error => {});
+    const jsonContent = JSON.stringify([-1]);
+    
     fs.writeFileSync(`./${customer}basket.json`, jsonContent, 'utf8' , error => {});
     console.log(`\n${customer}'s basket has been created!`);
     let test = JSON.parse(fs.readFileSync(`./${customer}basket.json`, { encoding: 'utf8' }));
-    console.log(test);
+    console.log(test + 'test');
 }
 
 function addItemToOrder(customer, item) {
@@ -17,10 +17,14 @@ function addItemToOrder(customer, item) {
     }
     
     const basket = JSON.parse(fs.readFileSync(`./${customer}basket.json`, { encoding: 'utf8' }));
+    console.log('basket before = ' + basket);
     basket.push(item);
+    console.log('basket =' + basket);
+    
+    fs.writeFileSync(`./${customer}basket`, JSON.stringify([basket]), { encoding: 'utf8' });
     console.log(`\n${customer}'s basket has been updated!`);
-    fs.writeFileSync(`./${customer}basket`, JSON.stringify(basket), { encoding: 'utf8' });
-    console.log(`\n${customer}'s basket has been updated!`);
+    let test = JSON.parse(fs.readFileSync(`./${customer}basket.json`, { encoding: 'utf8' }));
+    console.log(test + 'new basket is this');
   
 }
 
@@ -48,7 +52,7 @@ function calculateTotalPrice(customer) {
         if (hasItem(basket[i])) {
             let currentItem = basket[i];
             total += getPrice(currentItem);
-          
+            console.log(total);
           if(getPrice(currentItem) > highestPrice && getSwappable(currentItem) === true) {
             highestPrice = getPrice(currentItem);
           
@@ -90,6 +94,11 @@ function finishOrderText(customer) {
 createBasket('customer1');
 
 addItemToOrder('customer1', 1);
+
+addItemToOrder('customer1', 0);
+
+
+addItemToOrder('customer1', 2);
 
 const totalPrice = calculateTotalPrice('customer1')[0];
 

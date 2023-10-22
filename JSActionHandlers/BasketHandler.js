@@ -1,5 +1,5 @@
 
-import {getMenu, getName, getPrice, getSwappable, hasItem} from './menuItems.mjs';
+import {getMenu, getName, getPrice, getSwappable, hasItem} from './menuItems.js';
 
 
 // Define an array to store the selected food items
