@@ -1,4 +1,4 @@
-import {getMenu, getName, getPrice, getSwappable, hasItem} from './menuItems.js';
+import {getMenu, getName, getPrice, getSwappable, hasItem} from './menuItems.mjs';
 
 import fs from 'fs';
 
@@ -100,3 +100,5 @@ console.log(`Total Price: $${totalPrice}`);
 console.log('Total Price with a swap: $' + calculateTotalPrice('customer1')[1]);
 
 console.log('\n' + finishOrderText('customer1') + '\n' + "Order completed. JSON array has beeen cleared.");
+
+export {addItemToOrder, removeItemFromOrder, calculateTotalPrice, currentOrderText, finishOrderText};
