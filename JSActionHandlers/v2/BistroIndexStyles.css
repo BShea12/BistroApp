@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Dancing+Script&family=Lilita+One&family=Tilt+Neon&display=swap');
+
+*,::after,::before{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0 100px;
+    background-color: salmon;
+}
+
+/*   menu  */
+.nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.nav .logo h1{
+    font-weight: 800;
+    font-family: "Caveat Brush";
+    color: black;
+}
+
+.nav ul{
+    display: flex;
+    list-style: none;
+}
+
+.nav ul li{
+    margin: 30px;
+}
+
+.nav ul li a{
+    text-decoration: none;
+    color:brown;
+    font-weight: bold;
+    font-family: poppins;
+    font-size:20px;
+    letter-spacing: 3px;
+}
+
+/* active */
+
+.nav ul li a:hover{
+    color:white;
+    transition: 0.3s;
+
+}
+
+/* input */
+input{
+    padding: 10px 20px;
+    cursor:pointer;
+    font-weight: 500;
+}
+
+.sign{
+    background-color: rgb(224, 185, 101);
+    font-weight: 900;
+    font-family: "Caveat Brush";
+    font-size: 16px;
+    color:rgb(221, 75, 17);
+    outline: none;
+    border: none;
+    border-radius: 10%;
+}
+
+/* Content */
+.content{
+    display: grid;
+    grid-template-columns: 50% auto;
+    gap:30px;
+    align-items: center;
+    margin-top: 50px;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.content .content-left{
+    display: block;
+    width: 100%;
+}
+
+.content .content-left .info{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.content .content-left .info h2{
+    margin-bottom: 10px;
+    font-family: "c";
+    font-size: 200px;
+    color: red;
+}
+
+.content .content-left .info h2 i{
+    font-family: "Dancing Script";
+    font-size: 70px;
+    color: black;
+}
+
+.content .content-left .info p{
+    font-size: 30px;
+    color: black;
+    line-height:2pc;
+    margin-bottom: 50px;
+    font-family: "Caveat Brush";
+}
+
+.content .content-left button{
+    padding: 15px 25px;
+    background-color: rgb(224, 185, 101);
+    color:black;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-family: Impact;
+    font-size: 20px;
+}
+
+.content .content-right{
+    display: block;
+    width: 100%;
+
+}
+.content .content-right img{
+    width: 450px;
+    height: auto;
+    position: relative;
+    animation: rotate 10s linear infinite;
+}
+
+
+/* animate */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* cards */
+.popular{
+    width: 100%;
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: center;
+}
+.popular .list-items{
+    width: 90%;
+    position: relative;
+    margin-top: 100px;
+}
+.popular .list-items h3{
+    font-size: 30px;
+    font-weight: 600;
+    font-family: "Lilita One";
+    margin-bottom: 70px;
+}
+.popular .list-items .card-list{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.popular .card-list .card{
+    width: 200px;
+    height: auto;
+    display: block;
+    padding: 20px;
+    border-radius: 5%;
+    position: relative;
+    background: aliceblue;
+    outline: 2px solid rgb(255, 107, 97);
+}
+.popular .card-list .card img{
+    width: 150px;
+    height: auto;
+    bottom:50px;
+    left: 7px;
+    object-fit: cover;
+    object-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    box-shadow: 0 20px 20px rgb(251, 157, 157);
+    border-radius: 50%;
+}
+.popular.card-list .card .food-title{
+    padding: 20px 0 10px;
+}
+.popular .card-list .card .food-title h1{
+    text-align: center;
+    font-weight: 500;
+    font-family: "Lilita One";
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+.popular .card-list .card .dec-food p{
+    text-align: center;
+    font-weight: 500;
+    font-family: 'Times New Roman';
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+.popular .card-list .card .price{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Courier New';
+    font-weight: 700;
+}
+.popular .card-list .card .price span .plusicon{
+color: red;
+font-size: 25px;
+cursor: pointer;
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 20px;
+    background-color: rgb(221, 75, 17);
+}

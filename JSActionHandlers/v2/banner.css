@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Dancing+Script&family=Lilita+One&family=Tilt+Neon&display=swap');
+
+*,::after,::before{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*   menu  */
+.nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    background-color: salmon;
+    max-height: 80px;
+    box-shadow: 5px 1px 5px rgb(254, 121, 106);
+}
+
+.nav .logo h1{
+    font-weight: 800;
+    font-family: "Caveat Brush";
+    color: black;
+    margin: 0 100px;
+}
+
+.nav ul{
+    display: flex;
+    list-style: none;
+}
+
+.nav ul li{
+    margin: 30px;
+}
+
+.nav ul li a{
+    text-decoration: none;
+    color:brown;
+    font-weight: bold;
+    font-family: poppins;
+    font-size:20px;
+    letter-spacing: 3px;
+}
+
+/* active */
+
+.nav ul li a:hover{
+    color:white;
+    transition: 0.3s;
+
+}
+
+input{
+    padding: 10px 20px;
+    cursor:pointer;
+    font-weight: 500;
+}
+
+.sign{
+    background-color: rgb(224, 185, 101);
+    font-weight: 900;
+    font-family: "Caveat Brush";
+    font-size: 16px;
+    color:rgb(221, 75, 17);
+    outline: none;
+    border: none;
+    border-radius: 10%;
+    margin: 0 100px;
+}
